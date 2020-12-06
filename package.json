@@ -1,0 +1,10 @@
+{
+  "name": "CapchaBot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "FFantasy",
+  "dependencies": {
+    "@tensorflow/tfjs": "^2.7.0"
+  }
+}
