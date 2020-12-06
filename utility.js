@@ -40,6 +40,6 @@ function predict(img,model){
     imageData = tf.stack([imageData]);
     
     model.predict(imageData).data().then(result=>{
-        drag('slideBlock', result[1]);
+        drag('slideBlock',680/224*result[1]);
     });
 }
