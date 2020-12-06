@@ -1,5 +1,3 @@
-import * as tf from '@tensorflow/tfjs';
-
 function drag(id,pos){
     const movable = document.getElementById(id);
     if(movable==null) return;
@@ -45,15 +43,3 @@ function predict(img,model){
         drag('slideBlock', result[1]);
     });
 }
-
-function main(model){   
-    let img = document.getElementById("slideBg");
-    if(img.complete)
-        predict(img,model);
-    else
-        img.onload=()=>{
-            predict(img,model);
-        };   
-}
-
-tf.loadLayersModel('https://raw.githubusercontent.com/ffantasy/CapchaBot/master/object_detection_model/model.json').then(m=>main(m));

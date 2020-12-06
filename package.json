@@ -1,7 +1,7 @@
 {
   "name": "CapchaBot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "",
   "license": "MIT",
   "author": "FFantasy",
   "dependencies": {

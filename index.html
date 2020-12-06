@@ -1,10 +1,27 @@
 <html>
     <head>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
-    </head>>
+        <script src="index.js"></script>
+    </head>
 <body>
-    <img id="slideBg" src='test.jpg' />
+    <img id="slideBg" src='test.jpg' crossorigin='anonymous' />
 
-    <script src="./index.js"></script>
+    <script>
+        function main(model){   
+            let img = document.getElementById("slideBg");
+            if(img.complete)
+            {
+                predict(img,model);
+            }
+            else
+            {
+                img.onload=()=>{
+                    predict(img,model);
+                };   
+            }
+        }
+
+        tf.loadLayersModel('https://raw.githubusercontent.com/ffantasy/CapchaBot/master/object_detection_model/model.json').then(m=>main(m));
+    </script>
 </body>
 </html>
