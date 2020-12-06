@@ -1,5 +1,4 @@
-function drag(id,pos){
-    const movable = document.getElementById(id);
+function drag(movable,pos){
     if(movable==null) return;
     const mouseDownEvent = new MouseEvent('mousedown', {
             clientX: movable.getBoundingClientRect().left,
@@ -40,6 +39,8 @@ function predict(img,model){
     imageData = tf.stack([imageData]);
     
     model.predict(imageData).data().then(result=>{
-        drag('slideBlock',680/224*result[1]);
+        const movable = document.getElementById('slideBlock');
+        let rect=movable.getBoundingClientRect();
+        drag(movable,img.width/224*result[1]-rect.x);
     });
 }
