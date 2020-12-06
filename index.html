@@ -9,15 +9,14 @@
     <script>
         function main(model){   
             let img = document.getElementById("slideBg");
+            img.onload=()=>{
+                setTimeout(() => {
+                    predict(img,model);    
+                }, 1000);
+            };   
             if(img.complete)
             {
                 predict(img,model);
-            }
-            else
-            {
-                img.onload=()=>{
-                    predict(img,model);
-                };   
             }
         }
 

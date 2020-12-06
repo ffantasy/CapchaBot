@@ -41,6 +41,6 @@ function predict(img,model){
     model.predict(imageData).data().then(result=>{
         const movable = document.getElementById('slideBlock');
         let rect=movable.getBoundingClientRect();
-        drag(movable,img.width/224*result[1]-rect.x);
+        drag(movable,img.width/224*result[1]);
     });
 }
