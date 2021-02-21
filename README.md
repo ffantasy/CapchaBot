@@ -7,7 +7,7 @@
 
 1. 浏览器中安装tampermonkey扩展。
 2. 打开tampermonkey选项页面，在"utilities"选项卡下，"Install from URL"中输入"https://raw.githubusercontent.com/ffantasy/CapchaBot/master/inject.js" ，点击安装。
-3. 打开网址 https://007.qq.com/online.html ，点击体验验证码，弹出的滑块验证，脚本即会检测自动完成验证。
+3. 打开网址 https://007.qq.com/online.html ，选择“可疑用户”，点击“体验验证码”，弹出的滑块验证，脚本即会检测自动完成验证。
 
 ### 其它事项
 1. AI模型较大，加载需要一定时间。
